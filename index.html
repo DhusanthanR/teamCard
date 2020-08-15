@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="owl.carousel.min.css">
+    <link rel="stylesheet" href="owl.theme.default.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1a1a1a;
+        }
+        .container-card{
+            position: relative;
+        }
+        .container-card .card{
+            position: relative;
+            width: 320px;
+            height: 450px;
+            background: #232323;
+            overflow: hidden;
+        }
+        .container-card .card:before{
+            content:'';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #03aefd;
+            clip-path: circle(150px at 80% 20%);
+            transition: 0.5s ease-in-out;
+        }
+        .container-card .card:hover:before{
+            clip-path: circle(300px at 80% -20%);
+        }
+        .container-card .card .imgBx{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-60%);
+            z-index: 1000;
+            width:100%;
+            height: 220px;
+            transition: 0.6s;
+        }
+        .container-card .card:hover .imgBx{
+            top: 0%;
+            transform: translateY(20%);
+        }
+        .container-card .card .imgBx img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 270px;
+        }
+        .container-card .card .contentBx{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            transition: 0.8s;
+            z-index: 10;
+        }
+        .container-card .card:hover .contentBx{
+            height: 150px;
+        }
+        .container-card .card .contentBx h2{
+            position: relative;
+            margin: 20px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #fff;
+        }
+        .container-card .card .contentBx .size, .container .card .contentBx .color{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 4px 20px;
+            transition: 0.5s;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .container-card .card:hover .contentBx .size{
+            opacity: 1;
+            visibility: visible;
+            transition: 0.3s;
+        }
+        .container-card .card:hover .contentBx .color{
+            opacity: 1;
+            visibility: visible;
+            transition: 1s;
+        }
+        .container-card .card .contentBx .size h3, .container .card .contentBx .color h3{
+            color: #fff;
+            font-weight: 300px;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+        .container-card .card .contentBx .size span, .container .card .contentBx .color span{
+            color: #fff;
+            font-weight: 200px;
+            font-size: 14px;
+        }
+        .owl-theme .owl-dots button:focus{
+            outline: none;
+        }
+        .owl-theme .owl-dots .owl-dot span{
+            width: 30px;
+            height: 10px;
+            background: #232323;
+        }
+        .owl-theme .owl-dots .owl-dot.active span{
+            background:#ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+    <div class="owl-carousel owl-theme">
+        <div class="theme">
+            <div class="container-card">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="3.jpg" alt="loading">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Person 1</h2>
+                        <div class="size">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                        </div>
+                        <div class="color">
+                            <h3>color :</h3>
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="theme">
+            <div class="container-card">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="3.jpg" alt="loading">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Person 1</h2>
+                        <div class="size">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                        </div>
+                        <div class="color">
+                            <h3>color :</h3>
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="theme">
+            <div class="container-card">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="3.jpg" alt="loading">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Person 1</h2>
+                        <div class="size">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                        </div>
+                        <div class="color">
+                            <h3>color :</h3>
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="theme">
+            <div class="container-card">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="3.jpg" alt="loading">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Person 1</h2>
+                        <div class="size">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                        </div>
+                        <div class="color">
+                            <h3>color :</h3>
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="theme">
+            <div class="container-card">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="3.jpg" alt="loading">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Person 1</h2>
+                        <div class="size">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                        </div>
+                        <div class="color">
+                            <h3>color :</h3>
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="theme">
+            <div class="container-card">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="3.jpg" alt="loading">
+                    </div>
+                    <div class="contentBx">
+                        <h2>Person 1</h2>
+                        <div class="size">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                        </div>
+                        <div class="color">
+                            <h3>color :</h3>
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+    </div>
+    
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="owl.carousel.min.js"></script>
+    <script>
+    $('.owl-carousel').owlCarousel({
+      autoplay: true,
+      autoplayHoverPause: false,
+      autoplayTimeout:3000,
+      items: 3,
+      dots: true,
+      loop: true,
+      responsive:{
+        0: {
+          items:1,
+          dots:false
+        },
+        485:{
+          items:2,
+        },
+        728:{
+          items:2,
+          loop:true
+        },
+        960:{
+          items:3,
+          loop:true
+        }
+      }
+    });
+    owl.on('mousewheel', '.owl-stage', function (e) {
+    if (e.deltaY>0) {
+        owl.trigger('next.owl');
+    } else {
+        owl.trigger('prev.owl');
+    }
+    e.preventDefault();
+    });
+  </script>
+</body>
+</html>
